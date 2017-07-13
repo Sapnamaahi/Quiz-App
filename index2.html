@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<title>QUIZ APP</title>
 	<script src="angular.js"></script>
 	<script src="angular-route.js"></script>
 	<script src="index2.js"></script>
 	<link rel=" stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap.min.css">
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDAaE7s5uZFHSW71i0CT0lbELwXWilRVz8",
+    authDomain: "quiz-app-3759d.firebaseapp.com",
+    databaseURL: "https://quiz-app-3759d.firebaseio.com",
+    projectId: "quiz-app-3759d",
+    storageBucket: "",
+    messagingSenderId: "55436514958"
+  };
+  firebase.initializeApp(config);
+</script>
+
+	<script src="angularfire.min.js"></script>
 </head>
-<body>
+<body ng-controller="quizappCtrl as my" class="container">
+
+<div ng-view></div>
 
 </body>
 </html>
